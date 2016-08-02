@@ -14,11 +14,15 @@ class Perceptron:
         @return the output of a threshold perceptron with
         given weights, threshold, and inputs.
         '''        
+        # Calculate the strength with which the perceptron fires
         y = np.dot(self.weights, inputs)
+        
+        # Return 0 or 1 based on the threshold
         if y >= self.threshold:
             result = 1
         else:
             result = 0
+        
         return result
 
            
